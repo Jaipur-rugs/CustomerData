@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/CustomerData', {
+mongoose.connect('mongodb+srv://abhishekpa:2UqR6i63M7XdUOWJ@customerdata.4hc5q.mongodb.net/', {
 }).then(() => {
     console.log('MongoDB connected successfully');
 }).catch(err => {
