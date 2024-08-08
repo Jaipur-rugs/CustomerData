@@ -67,7 +67,7 @@ app.use(bodyParser.json()); // Middleware to parse JSON
 // Route to handle POST requests
 app.post('/', (req, res) => {
     const customerData = req.body;
-    Console.log("New Request");
+    console.log("New Request");
     // Convert fields to correct types if necessary
     if (customerData.priority) {
         customerData.priority = parseInt(customerData.priority, 10);
