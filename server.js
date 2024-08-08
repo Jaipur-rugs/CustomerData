@@ -67,8 +67,7 @@ app.use(bodyParser.json()); // Middleware to parse JSON
 // Route to handle POST requests
 app.post('/', (req, res) => {
     const customerData = req.body;
-    console.log('Received Data:', customerData);
-
+    Console.log("New Request");
     // Convert fields to correct types if necessary
     if (customerData.priority) {
         customerData.priority = parseInt(customerData.priority, 10);
@@ -78,7 +77,6 @@ app.post('/', (req, res) => {
     }
 
     const customer = new Customer(customerData);
-
     customer.save()
         .then(() => {
             console.log('Data saved successfully!');
@@ -92,5 +90,5 @@ app.post('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+    console.log(`Server running at port ${port}`);
 });
