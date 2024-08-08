@@ -58,7 +58,7 @@ const customerSchema = new mongoose.Schema({
 });
 
 // Create the model
-const Customer = mongoose.model('Customer', customerSchema, 'User Information');
+const Customer = mongoose.model('Customer', customerSchema, 'UserInformation');
 
 // Middleware
 app.use(cors()); // Allow all origins
